@@ -1,11 +1,35 @@
 {
-  "name": "wechat-miniapp-clothing",
-  "appid": "",
+  "name": "服装优选",
+  "appid": "__UNI__CLOTHING",
+  "description": "服装购物小程序",
   "versionName": "1.0.0",
   "versionCode": "100",
-  "description": "Manifest for uni-app project",
+  "transformPx": false,
   "mp-weixin": {
     "appid": "",
-    "setting": {}
+    "setting": {
+      "urlCheck": false,
+      "es6": true,
+      "postcss": true,
+      "minified": true
+    },
+    "usingComponents": true,
+    "optimization": {
+      "subPackages": true
+    }
+  },
+  "h5": {
+    "router": {
+      "mode": "hash"
+    },
+    "devServer": {
+      "port": 5173,
+      "proxy": {
+        "/api": {
+          "target": "http://localhost:8080",
+          "changeOrigin": true
+        }
+      }
+    }
   }
 }

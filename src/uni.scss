@@ -1,0 +1,88 @@
+// ========================================
+// 设计系统 - 品牌感暖色调
+// ========================================
+
+// 品牌色
+$brand-primary:    #C4594A;
+$brand-secondary:  #E8B4A0;
+$brand-accent:     #D4956A;
+
+// 背景色
+$bg-page:          #F8F5F2;
+$bg-card:          #FFFFFF;
+
+// 文字色
+$text-primary:     #1A1A1A;
+$text-secondary:   #666666;
+$text-placeholder: #AAAAAA;
+
+// 功能色
+$price-color:      #C4594A;
+$success-color:    #52C41A;
+$warning-color:    #FAAD14;
+$error-color:      #FF4D4F;
+$border-color:     #F0EDED;
+
+// 圆角
+$radius-sm:  8rpx;
+$radius-md:  16rpx;
+$radius-lg:  24rpx;
+$radius-xl:  32rpx;
+$radius-round: 999rpx;
+
+// 间距
+$spacing-xs:  8rpx;
+$spacing-sm:  16rpx;
+$spacing-md:  24rpx;
+$spacing-lg:  32rpx;
+$spacing-xl:  48rpx;
+
+// 字号
+$font-xs:  20rpx;
+$font-sm:  24rpx;
+$font-md:  28rpx;
+$font-lg:  32rpx;
+$font-xl:  36rpx;
+$font-xxl: 44rpx;
+
+// 阴影
+$shadow-sm: 0 2rpx 8rpx rgba(0, 0, 0, 0.04);
+$shadow-md: 0 4rpx 16rpx rgba(0, 0, 0, 0.08);
+$shadow-lg: 0 8rpx 32rpx rgba(0, 0, 0, 0.12);
+
+// CSS 变量 (运行时可用)
+:root {
+  --brand-primary: #{$brand-primary};
+  --brand-secondary: #{$brand-secondary};
+  --brand-accent: #{$brand-accent};
+  --bg-page: #{$bg-page};
+  --text-primary: #{$text-primary};
+  --text-secondary: #{$text-secondary};
+  --price-color: #{$price-color};
+}
+
+// 通用 mixin
+@mixin ellipsis($lines: 1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @if $lines == 1 {
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

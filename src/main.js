@@ -1,11 +1,10 @@
-import Vue from 'vue'
-import App from './App'
+import { createSSRApp } from 'vue'
+import { createPinia } from 'pinia'
+import App from './App.vue'
 
-Vue.config.productionTip = false
-
-App.mpType = 'app'
-
-const app = new Vue({
-  ...App
-})
-app.$mount()
+export function createApp() {
+  const app = createSSRApp(App)
+  const pinia = createPinia()
+  app.use(pinia)
+  return { app }
+}

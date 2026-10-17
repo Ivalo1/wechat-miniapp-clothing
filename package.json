@@ -1,12 +1,29 @@
 {
   "name": "wechat-miniapp-clothing",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev:mp-weixin": "cross-env UNI_PLATFORM=mp-weixin node ./node_modules/@dcloudio/uni-cli-service/bin/uni-cli-service.js dev",
-    "build:mp-weixin": "cross-env UNI_PLATFORM=mp-weixin node ./node_modules/@dcloudio/uni-cli-service/bin/uni-cli-service.js build"
+    "dev:mp-weixin": "uni -p mp-weixin",
+    "build:mp-weixin": "uni build -p mp-weixin",
+    "dev:h5": "uni",
+    "build:h5": "uni build"
   },
   "dependencies": {
-    "@dcloudio/uni-app": "^3.0.0"
+    "@dcloudio/uni-app": "3.0.0-alpha-5030220261016001",
+    "@dcloudio/uni-app-plus": "3.0.0-alpha-5030220261016001",
+    "@dcloudio/uni-components": "3.0.0-alpha-5030220261016001",
+    "@dcloudio/uni-h5": "3.0.0-alpha-5030220261016001",
+    "@dcloudio/uni-mp-weixin": "3.0.0-alpha-5030220261016001",
+    "vue": "^3.4.38",
+    "pinia": "^2.1.7"
+  },
+  "devDependencies": {
+    "@dcloudio/types": "^3.4.12",
+    "@dcloudio/uni-automator": "3.0.0-alpha-5030220261016001",
+    "@dcloudio/uni-cli-shared": "3.0.0-alpha-5030220261016001",
+    "@dcloudio/uni-stacktracey": "3.0.0-alpha-5030220261016001",
+    "@dcloudio/vite-plugin-uni": "3.0.0-alpha-5030220261016001",
+    "sass": "^1.77.8",
+    "vite": "^5.4.14"
   }
 }
