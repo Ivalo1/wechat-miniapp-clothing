@@ -1,0 +1,11 @@
+{
+  "name": "wechat-miniapp-clothing",
+  "appid": "",
+  "versionName": "1.0.0",
+  "versionCode": "100",
+  "description": "Manifest for uni-app project",
+  "mp-weixin": {
+    "appid": "",
+    "setting": {}
+  }
+}
